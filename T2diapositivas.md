@@ -54,6 +54,8 @@ element: class="fragment" data-fragment-index="1"
 - Puede servir gran cantidad de carga de lecturas y escrituras.
 - Esquema dinámico.
 
+_Inconveniente: los datos no son consistentes siempre, como facebook. Esquema dinámico: no es rígido como las tablas de SQL. No sustituye a las BD SQL, tienen distintas finalidades_
+
 
 ### Ventajas
 
@@ -61,6 +63,8 @@ element: class="fragment" data-fragment-index="1"
 - Se ejecutan en clusters de máquinas baratas.
 - Pueden manejar enormes cantidades de datos.
 - No generan cuellos de botella.
+
+_Permite e. horizontal: incluir más servidores._
 
 
 ### Desventajas
@@ -70,6 +74,7 @@ element: class="fragment" data-fragment-index="1"
 - Poca cantidad de desarrolladores y administradores que conocen la tecnología.
 - Falta de estándares. Cada base de datos NoSQL tiene su propia API.
 
+_ Para datos que siguen el modelo relacional son mejores los SGBDR: Aquí la lógica la tendría que hacer aquí la aplicación, no la base de datos_
 
 
 ## MongoDB: Primeros pasos
