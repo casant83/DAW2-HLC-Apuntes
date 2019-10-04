@@ -250,6 +250,8 @@ Note: Aunque en el ejemplo aparecen 2 colecciones, a tí no debería aparecerte 
 - **update**: Actualizar documentos
 - **remove**: Eliminar documentos
 
+_Hay más pero vamos a usar estas_
+
 
 ### Comparativa de operaciones
 
@@ -259,6 +261,8 @@ CREATE    | INSERT      | insert
 READ      | SELECT      | find
 UPDATE    | UPDATE      | update
 DELETE    | DELETE      | remove 
+
+_CRUD: soporta estas 4 operaciones_
 
 
 ### Crear documentos (objetos)
@@ -271,7 +275,7 @@ DELETE    | DELETE      | remove
 > persona2
 { "nombre" : "Pere", "apellido" : "Gil", "pais" : "España" }
 ```
-
+_Se pueden crear variables(objetos)_
 
 ### Insertar documentos
 
