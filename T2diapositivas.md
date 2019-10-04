@@ -112,6 +112,8 @@ systemctl  stop     mongodb   # Parar
 systemctl  enable   mongodb   # Habilitar
 systemctl  disable  mongodb   # Deshabilitar
 ```
+_systemctl  enable   mongodb: cada vez que se inicie el ordenador, si inicia. service es la otra opción (service mongodb status... Siempre al contrario que aquí) pero no tiene las opciones enable/disable_
+
 
 
 ### Servidor y cliente 
@@ -124,6 +126,8 @@ mongod  --version
 mongo   --version
 ```
 
+_mongod: de demonio(servicio). Una vez instalado --version para ver la versión instalada_
+
 
 ### Conectar al gestor de BBDD
 
@@ -134,7 +138,6 @@ $ mongo
 connecting to: test
 MongoDB shell version: 3.2.21
 ```
-
 **mongo   *nombre_bd***
 
 ```bash
@@ -142,6 +145,8 @@ $ mongo local
 connecting to: local
 MongoDB shell version: 3.2.21
 ```
+
+_mongo: en local, mongo nombre_bd: cuando se quiere trabajar en otro servidor_
 
 
 ### Listar BBDD
@@ -153,6 +158,8 @@ MongoDB shell version: 3.2.21
 admin  0.000GB
 local  0.000GB
 ```
+
+_el punto y coma en realidad no es necesario aquí_
 
 
 ### Cambiar de BD
@@ -177,6 +184,7 @@ switched to db prueba
 > db    
 prueba
 ```
+_IMPORTANTE: una variable que guarda el valor de la variable que estás usando en ese momento_
 
 
 ### Eliminar una BD
