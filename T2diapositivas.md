@@ -64,7 +64,7 @@ _Inconveniente: los datos no son consistentes siempre, como facebook. Esquema di
 - Pueden manejar enormes cantidades de datos.
 - No generan cuellos de botella.
 
-_Permite e. horizontal: incluir más servidores._
+_Permite escalabilidad. horizontal: incluir más servidores. En las bd SQL es más dificil la escalabilidad horizontal._
 
 
 ### Desventajas
@@ -74,7 +74,7 @@ _Permite e. horizontal: incluir más servidores._
 - Poca cantidad de desarrolladores y administradores que conocen la tecnología.
 - Falta de estándares. Cada base de datos NoSQL tiene su propia API.
 
-_ Para datos que siguen el modelo relacional son mejores los SGBDR: Aquí la lógica la tendría que hacer aquí la aplicación, no la base de datos_
+_ Para datos que siguen el modelo relacional son mejores los SGBDR: Aquí la lógica la tendría que hacer aquí la aplicación, no la base de datos. _
 
 
 ## MongoDB: Primeros pasos
@@ -90,6 +90,8 @@ _ Para datos que siguen el modelo relacional son mejores los SGBDR: Aquí la ló
 apt update 
 apt install mongodb  # se instala la versión 3.6.3
 ``` 
+
+_apt update: para actualizar los repositorios_
 
 
 ### Instalación
@@ -112,7 +114,7 @@ systemctl  stop     mongodb   # Parar
 systemctl  enable   mongodb   # Habilitar
 systemctl  disable  mongodb   # Deshabilitar
 ```
-_systemctl  enable   mongodb: cada vez que se inicie el ordenador, si inicia. service es la otra opción (service mongodb status... Siempre al contrario que aquí) pero no tiene las opciones enable/disable_
+_systemctl  enable   mongodb: cada vez que se inicie el ordenador, se inicia el servicio. service es la otra opción (service mongodb status... Siempre al contrario que aquí) pero no tiene las opciones enable/disable_
 
 
 
@@ -126,7 +128,8 @@ mongod  --version
 mongo   --version
 ```
 
-_mongod: de demonio(servicio). Una vez instalado --version para ver la versión instalada_
+_mongod: de demonio(servicio) Lanza el servicio, arranca el servidor, es como un script._ 
+_Una vez instalado --version para ver la versión instalada_
 
 
 ### Conectar al gestor de BBDD
@@ -146,7 +149,9 @@ connecting to: local
 MongoDB shell version: 3.2.21
 ```
 
+_mongo: para acceder.  mongo nombreBD: Si no existe la base de datos, te la crea, aunque no se guarda hasta que no metes algún documento_
 _mongo: en local, mongo nombre_bd: cuando se quiere trabajar en otro servidor_
+
 
 
 ### Listar BBDD
