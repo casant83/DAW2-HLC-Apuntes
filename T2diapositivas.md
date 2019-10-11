@@ -341,7 +341,7 @@ _> db.personas.insert( [ { nombre: "Miguel", edad: 36 },{ nombre: "Montse", edad
 > db.personas.find( { edad: {$gt: 18} } )
 > db.personas.find( { edad: {$lt: 18} } )
 ```
-
+_buscar mayor o igual y menor o igual._
 
 ### La función sort(...)
 
@@ -351,6 +351,7 @@ _> db.personas.insert( [ { nombre: "Miguel", edad: 36 },{ nombre: "Montse", edad
 ```bash
 > db.personas.find().sort( {apellido: -1} )
 ```
+_Para ordenar_
 
 
 ### La función limit(...)
@@ -369,7 +370,7 @@ _> db.personas.insert( [ { nombre: "Miguel", edad: 36 },{ nombre: "Montse", edad
 ```bash
 > db.personas.find().sort( {apellido: -1} ).skip(1)
 ```
-
+_Salta los 10 primeros, por ejemplo..._
 
 ### La función count()
 
