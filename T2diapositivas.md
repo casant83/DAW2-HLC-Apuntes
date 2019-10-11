@@ -309,6 +309,8 @@ _Se pueden crear variables(objetos)_
 > var p2 = { nombre: "Encarna", apellido: "Vales", edad: 17, pais: "USA" }
 > db.personas.insert( [p1, p2] )
 ```
+_> db.personas.insert( [ { nombre: "Miguel", edad: 36 },{ nombre: "Montse", edad:26 } ] )_
+
 
 
 ### Ver documentos 
