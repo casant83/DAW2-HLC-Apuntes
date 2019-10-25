@@ -134,7 +134,7 @@ a[0]   // 100
 a[1]   // "hola"
 a[2]   // true
 ```
-
+_typeof y instanceof Array (->true o false) es importante para consultar tipos o ver si es un array_
 
 **Ejemplos de objetos**
 
@@ -151,6 +151,7 @@ persona.nombre   // "José"
 persona.edad     // 30
 persona.altura   // 170
 ```
+_Para acceder a las propiedades de un objeto: #objeto.propiedad#_
 
 
 ### Funciones nominadas
