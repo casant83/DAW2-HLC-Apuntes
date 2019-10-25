@@ -120,7 +120,7 @@ typeof a;   // string
 
 _Para declarar los valores de un array: entre [ ] separados por comas_
 
-_Para declarar objetos: {clave:valor}
+_Para declarar objetos: {clave:valor}_
 
 **Ejemplos de arrays**
 
@@ -202,10 +202,15 @@ function (a, b) { return a + b; }
 - **async / await**
 
 
+_Se está ejecutando código, pero no se queda bloqueado_
+_async / await ECMAScript 7-2016_
+
 ### Callbacks
 
 Un **callback** es una **función que es pasada como argumento a otra función**.
 
+_Se utiliza muchísimo todavía_
+_Sirve para: cuando está trabajando la bd  se sigue ejecutando el código, cuando responde la bd, vuelve a la función que hizo la petición: hace el tratamiento de la respuesta_
 
 **Ejemplo 1**
 
@@ -220,6 +225,8 @@ function hola(){
 setTimeout (hola, 5000);  
 setInterval(hola, 5000);  
 ```
+_El callback normalmente está asociada al servidor, pero no necesariamente, por ejemplo con los setTimeout_
+_funciones anónomas se suelen utilizar para callback_
 
 
 **Ejemplo 2**
@@ -261,6 +268,7 @@ if ("geolocation" in navigator) {
 }
 ```
 
+_); llamada a función primera. Invoca y declara una función_
 
 ### Promesas
 
