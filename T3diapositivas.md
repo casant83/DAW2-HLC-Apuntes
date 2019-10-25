@@ -57,6 +57,12 @@ element: class="fragment" data-fragment-index="1"
   - Clases
   - Funciones flecha
   - Template strings
+  
+_Solo se parecen en que se basan en la sintaxis de C, pero son dos lenguajes muy distintos. En un pricipio JS se hizo para aplicaciones pequeñitas, en el diseño tb es distinto: Java lenguaje orientado a objetos, JS: multiparadigma (funcional, sobre todo, y orientado a objetos...)_
+_No hay que saber el nombre del inventor_
+_Para declarar variables: var, let y const_
+_Funciones flecha (lamda de Java)_
+_Template string: se puede meter código JS en un string_
 
 
 ### Características
@@ -69,6 +75,10 @@ element: class="fragment" data-fragment-index="1"
   - con soporte para objetos
 - soporta ejecución asíncrona
 
+_Tipado dinámico: coge el tipo del valor que tenga en cada momento: puede ir cambiando_
+_prototipos no vamos a entrar mucho, porque ya en Angular, por ejemplo, ya no se trabaja con prototipos sino con clases_
+_Azúcar sintáctica: existe pero no se usa_
+_soporta ejecución asíncrona: no se queda bloqueado cada vez que se consultan datos por ejemplo: se sigue ejecutando mientras se hace la colsulta. Permite que no se queden bloqueados los script_
 
 ### Tipos primitivos simples
 
@@ -101,7 +111,8 @@ typeof a;   // string
 
 - Arrays:  `[   ]`
 - Objetos:  `{   }`
-
+_Para declarar los valores de un array: entre [ ] separados por comas_
+_Para declarar objetos: {clave:valor}
 
 **Ejemplos de arrays**
 
