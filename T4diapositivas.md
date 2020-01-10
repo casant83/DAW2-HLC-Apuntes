@@ -55,6 +55,9 @@ element: class="fragment" data-fragment-index="1"
   - **routes.js**
   - **config.js**
 
+_https://github.com/jamj2000/tiendaw_
+_package.json equivalente al pom.xml_
+
 
 
 ## Node.js
