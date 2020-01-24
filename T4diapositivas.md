@@ -260,6 +260,10 @@ npx  @vue/cli  create          nombre-proyecto  # Iniciar proyecto de Vue
 npx  degit  sveltejs/template  nombre-proyecto  # Iniciar proyecto de Svelte   
 ```
 
+_Angular:300megas, React:200megas, Vue:100megas_
+_degit descarga un repositorio de github unos 100k_
+_npm run dev_
+
 
 ### Módulos incorporados (built-in)
 
@@ -275,7 +279,8 @@ npx  degit  sveltejs/template  nombre-proyecto  # Iniciar proyecto de Svelte
   - ...
 
 Mas info: https://www.w3schools.com/nodejs/ref_modules.asp
-
+ _require fs, no hay que instalarlo_
+ _process no hay que poner require, se puede acceder con env_
 
 
 ## El servidor web
@@ -307,6 +312,9 @@ Para ejecutar:
 ```bash
 node  server1
 ```
+_nos conviene tener una variable express para poder acceder a routes, por ejemplo... Está en las capturas_
+_Normalmente se hace con un enroutador_
+_node  server1: nosotros utilizadmos npm_
 
 
 ### Otro servidor sencillo  
@@ -355,7 +363,7 @@ mongoose.connect('mongodb://localhost:27017/tienda', { useNewUrlParser: true })
   .then(db   => console.log ('Conexión correcta a la BD'))
   .catch(err => console.log ('Error en la conexión a la BD'));
 ```
-
+_Mongoose se instala como un paquete de aplicación?_
 
 ### El modelo de datos
 **models.js**
@@ -376,7 +384,7 @@ module.exports =  {
     Articulo
 };
 ```
-
+_Hay que decir cómo están hechas las colecciones: las tablas_
 
 ### Operaciones CRUD
 
@@ -387,6 +395,8 @@ module.exports =  {
 | Update   | PUT      | update    | Modelo.findOneAndUpdate      |
 | Delete   | DELETE   | remove    | Modelo.findOneAndRemove      |
 
+_**CAE** Update y Delete hay quien lo hace con get, pero  mejor así._ 
+_Crear: Hacer un objeto y guardarlo_
 
 ### Acceso a la BD (I)
 **routes.js**
