@@ -397,6 +397,7 @@ _Hay que decir cómo están hechas las colecciones: las tablas_
 
 _**CAE** Update y Delete hay quien lo hace con get, pero  mejor así._ 
 _Crear: Hacer un objeto y guardarlo_
+_MongoDB:Operaciones en mongodb, y Mongoose: métodos disponibles_
 
 ### Acceso a la BD (I)
 **routes.js**
@@ -536,7 +537,7 @@ const routes = require('./routes');
 // Rutas
 app.use ('/api', routes);
 ```
-
+_Configurar puerto, etc_
 
 ### Parámetros de configuración
 
@@ -579,6 +580,8 @@ app.listen (config.port,
   - **curl**
   - **DevTools del navegador**
   - **Postman**
+_Formas de comprobar las apis, puede caer curl_
+_DevTools Consola del navegador_
 
 
 ### curl (I)
@@ -608,7 +611,7 @@ curl -H 'Content-Type: application/json' \
 curl -H 'Content-Type: application/json' \
      -X DELETE http://localhost:3000/api/articulos/5b609c52c60bd6656205e3d7
 ```
-
+_-H cabecera, -X_
 
 ### DevTools del navegador (I)
 
