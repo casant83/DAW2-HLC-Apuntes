@@ -43,6 +43,8 @@ element: class="fragment" data-fragment-index="1"
 - Hacer peticiones a la API desde distintos clientes.
 - Definir el modelo de datos y acceder a la base de datos desde el código de la aplicación.
 
+_Se envían los datos no la vista, mediante una Api: la más utilizada es la API REST_
+
 
 ### Aplicación de ejemplo
 
@@ -64,6 +66,8 @@ _package.json equivalente al pom.xml_
 ## Node.js
 
 ![Node](assets/node.png)
+
+_No es un framework, es un entorno de ejecución que se basa en un motor de JS_
 
 
 ### Motor Javascript V8
@@ -88,6 +92,8 @@ sudo  apt  install  npm
 
 Note: **npm** =  **N**ode **P**ackage **M**anager
 
+_No nos interesó hacerlo por la versión, lo instalamos desde la página oficial de Node, descomprimirlo 
+
 
 ### Inicio de un proyecto
 
@@ -99,7 +105,8 @@ npm  init  -y
 ```
 
 Note: La opción -y (--yes) de `npm init` crea un archivo package.json con opciones por defecto, sin solicitar al usuario.
-
+_npm init crea el archivo package.json_
+_npm start: _
 
 ### Archivo package.json
 
@@ -124,6 +131,8 @@ Note: La opción -y (--yes) de `npm init` crea un archivo package.json con opcio
 }
 ```
 
+_ dependencias para utilizarla, devDependencies: nos hacen falta para desarrollarla_
+
 
 ### Instalación de módulos
 
@@ -146,6 +155,10 @@ Note:
 -D: anotar en package.json como dependencia de desarrollo.
 -g: instala en el sistema de forma global.
 
+_no hace falta la -S --save no hace falta en las versiones modernas_
+_ -D sí hace falta para instalarla como una dependencia de desarrollo_
+_ -g módulos ejecutables, es una forma demasiado larga hay una forma más directa_
+_Se puede poner i en vez de install_
 
 ### Desinstalación de módulos
 
@@ -166,6 +179,8 @@ Note:
 -S: anotar en package.json como dependencia de aplicación.
 -D: anotar en package.json como dependencia de desarrollo.
 -g: instala en el sistema de forma global.
+
+
 
 
 ### Módulos incorporados (built-in)
