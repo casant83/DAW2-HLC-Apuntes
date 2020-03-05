@@ -73,16 +73,28 @@ element: class="fragment" data-fragment-index="1"
 
 ### Aplicación de ejemplo
 
-- Versión de estudio:
+**Frontend**
 
-  - [TiendaW - Código](https://github.com/jamj2000/tiendaw)
-  - [TiendaW - Demo](http://tiendaw.herokuapp.com)
+- [TiendaFrontend - Código](https://github.com/jamj2000/tiendafrontend)
+- [TiendaFrontend - Demo](http://tiendafrontend.now.sh)
 
-- Otra versión:
+**Backend (API RESTful)**
 
-  - [Tienda0 - Código](https://github.com/jamj2000/tienda0)
-  - [Tienda0 - Demo](http://tienda0.herokuapp.com)
+- [TiendaBackend - Código](https://github.com/jamj2000/tiendabackend)
+- [TiendaBackend - Demo](http://tiendabackend.herokuapp.com)
 
+
+### Otras aplicaciones de ejemplo
+
+**TiendaW (fullstack)**
+
+- [TiendaW - Código](https://github.com/jamj2000/tiendaw)
+- [TiendaW - Demo](http://tiendaw.herokuapp.com)
+
+**Tienda0 (fullstack)**
+
+- [Tienda0 - Código](https://github.com/jamj2000/tienda0)
+- [Tienda0 - Demo](http://tienda0.herokuapp.com)
 
 
 ## Frameworks
@@ -157,7 +169,206 @@ Los más usados actualmente (Enero 2018)
 - Y ofrece muchas funcionalidades.
 - Puedes descargarlo desde http://vanilla-js.com/ 
 
+## Uso de API Fetch
 
+- Javascript ya incorpora de serie la posibilidad de **realizar peticiones asíncronas de datos a un servidor**.
+- Esta técnica también se conoce como **AJAX**.
+- Tradicionalmente se ha usado el objeto **XMLHttpRequest**.
+- Una forma más cómoda es usar la moderna **[API Fetch](https://developer.mozilla.org/es/docs/Web/API/Fetch_API/Utilizando_Fetch)**.
+
+
+### Fetch - GET ALL
+
+```javascript
+fetch(url, { method: "GET" })
+.then(res => res.json())
+.then(data => {  /* código para éxito */ })
+.catch(err => {  /* código para error */ });
+```
+
+
+### Fetch - GET
+
+```javascript
+fetch(url + documento._id, { method: "GET" })
+.then(res => res.json())
+.then(data => {  /* código para éxito */ })
+.catch(err => {  /* código para error */ });
+```
+
+
+### Fetch - POST
+
+```javascript
+fetch(url, {
+    method: "POST",
+    headers: { "Content-Type": "application/json" },
+    body: JSON.stringify(documento)
+})
+.then(res => res.json())
+.then(data => {  /* código para éxito */ })
+.catch(err => {  /* código para error */ });
+```
+
+
+### Fetch - PUT
+
+```javascript
+fetch(url + documento._id, {
+    method: "PUT",
+    headers: { "Content-Type": "application/json" },
+    body: JSON.stringify(documento)
+})
+.then(res => res.json())
+.then(data => {  /* código para éxito */ })
+.catch(err => {  /* código para error */ });
+```
+
+
+### Fetch - DELETE
+
+```javascript
+fetch(url + documento._id, { method: "DELETE" })
+.then(res => res.json())
+.then(data => {  /* código para éxito */ })
+.catch(err => {  /* código para error */ });
+```
+
+
+
+## Componentes web
+
+### Definición de componente web
+
+**Parte de una aplicación web que encapsula código HTML, CSS y JavaScript**
+
+
+### Similitudes
+
+![similitud](assets/similitud.png)
+
+
+### Desarrollo por componentes (I)
+
+![App](assets/app.png)
+
+
+### Desarrollo por componentes (II)
+
+![Articulos](assets/articulos.png)
+
+
+### Desarrollo por componentes (III)
+
+![Clientes](assets/clientes.png)
+
+
+## Svelte
+
+- Compilador / Framework  para frontend
+- Sintaxis sencilla
+- Menos líneas de código.
+- Ejecución muy eficiente y rápida.
+- Pequeño peso de la aplicación final
+- Facilita la programación reactiva.
+
+[Apuntes: Frontend con Svelte](https://github.com/jamj2000/tiendafrontend/blob/master/README.md)
+
+
+### Creación de proyecto
+
+```console
+npx  degit  sveltejs/template   nombre-proyecto
+cd  nombre-proyecto
+tree
+
+├── package.json
+├── public
+│   ├── favicon.png
+│   ├── global.css
+│   └── index.html
+├── README.md
+├── rollup.config.js
+└── src
+    ├── App.svelte
+    └── main.js
+```
+
+
+### Estructura de un componente
+
+```html
+<script>
+
+</script>
+
+<style>
+
+</style>
+
+<!-- Nuestros elementos HTML y componentes web -->
+```
+
+
+### Enrutamiento en el cliente
+
+- Svelte no tiene un módulo de enrutamiento oficial.
+- Tenemos varios no oficiales.
+- Usaremos el módulo de **`svelte-routing`**
+
+
+#### App.svelte
+
+```html
+<script>
+  import { Router } from "svelte-routing";
+</script>
+
+<Router>
+  <Nav />
+  <Contenido />
+</Router>
+```
+
+
+#### Nav.svelte
+
+```html
+<script>
+  import { Link } from "svelte-routing";
+</script>
+
+<nav>
+    <Link to="/">🛒 Inicio</Link>
+    <Link to="/articulos">🎁 Artículos</Link>
+    <Link to="/clientes">👥 Clientes</Link>
+</nav>
+```
+
+
+#### Contenido.svelte
+
+```html
+<script>
+  import { Route }  from "svelte-routing";
+  import Inicio     from "./Inicio.svelte";
+  import Articulos  from "./Articulos.svelte";
+  import Clientes   from "./Clientes.svelte";
+</script>
+
+<main id="contenido">
+  <Route path="/"          component={Inicio} />
+  <Route path="/articulos" component={Articulos} />
+  <Route path="/clientes"  component={Clientes} />
+</main>
+```
+
+
+### Código en GitHub
+
+- https://github.com/jamj2000/tiendafrontend
+
+---
 
 ## Ejemplo
 
